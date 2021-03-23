@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYPING GAME | 無料で遊べるクソゲー集</title>
+    <link rel="stylesheet" href="css/gameStyles.css">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c105f52f00.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container clear">
+            <div class="header-left float-left">
+                <p>無料で遊べるクソゲー集</p>
+                <a href="index.html"><h2>KUSO GAMES<i class="fas fa-gamepad"></i></h2></a>
+            </div>
+            <nav class="float-right global-nav">
+                <ul class="menus">
+                    <li><a href="typing.html">TYPING</a></li>
+                    <li><a href="slot.html">SLOT</a></li>
+                    <li><a href="maze.html">MAZE</a></li>
+                    <li><a href="memory.html">MEMORY</a></li>
+                    <li><a href="shooting.html">SHOOTING</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="description-panel clear">
+            <div class="game-description float-left">
+                <h2>TYPING GAME</h2>
+                <p>ブラウザゲームの王道、タイピングゲームです！ルールは簡単、<span class="emphasis">20秒</span>以内に<span class="emphasis">10個</span>の単語をタイピングしてください。腕に自信のある人は是非鬼畜コースにチャレンジしてみてね！</p>
+                <p>ちなみに、出されたお題通りにタイピングしないとダメなクソ仕様だよ！「<span class="emphasis">つ</span>」とかは「<span class="emphasis">tu</span>」って打ってね！</p>
+                <p class="description-text">ゲームを始めるには、難易度を選んで <span class="button">START</span> ボタンを押してください。</p>
+            </div>
+            <form method="submit" action="" class="level-choices float-right">
+                <h4>難易度</h4>
+                <div class="choice">
+                    <input type="radio" name="level" value="0" id="easy">
+                    <label for="easy">簡単</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" name="level" value="1" id="normal">
+                    <label for="normal">普通</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" name="level" value="2" id="difficult">
+                    <label for="difficult">難しい</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" name="level" value="3" id="hard">
+                    <label for="hard">鬼畜</label>
+                </div>
+                <button id="start-button">START</button>
+            </form>
+        </div>
+        <div class="game-panel">
+            <p class="typing-timer-container">残り時間：<span id="typing-timer">0.00</span></p>
+            <ul id="typing-score-count"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+            <p id="typing-target-ja">ここに表示される文字を打ってね！</p>
+            <p id="typing-target-en">Let's type!</p>
+            <p id="typing-info">
+                Correct type：<span id="typing-score">0</span>,
+                Miss type：<span id="typing-miss">0</span>
+            </p>
+        </div>
+        <div class="result-panel">
+            <div id="typing-result" class="game-result">
+                <h2 id="typing-victory" class="game-victory"></h2>
+                <p>正答数：<span id="typing-result-clear"></span></p>
+                <p>Correct type：<span id="typing-result-score">00</span></p>
+                <p>Miss type：<span id="typing-result-miss">00</span></p>
+                <a href="" class="retry-button">RETRY</a>
+            </div>
+        </div>
+    </main>
+    
+    <script src="js/typing.js"></script>
+</body>
+</html>

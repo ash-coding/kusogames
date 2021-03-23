@@ -1,0 +1,668 @@
+/* base */
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    word-break: break-all;
+    text-decoration: none;
+}
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div,
+label, input, select {
+    margin: 0;
+    padding: 0;
+    color: #696969;
+    text-align: left;
+}
+html {
+    font-size: 62.5%;
+}
+ul li {
+    list-style: none;
+}
+.fa, .fas, .fab, .far {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 4.8rem;
+}
+h2 {
+	font-size: 3.4rem;
+    line-height: 3.6rem;
+    line-height: 4rem;
+}
+h3 {
+	font-size: 2.4rem;
+	font-weight: 800;
+	line-height: 3rem;
+}
+h4 {
+	font-size: 1.8rem;
+	line-height: 2.6rem;
+}
+h5 {
+	font-size: 1.4rem;
+	font-weight: 400;
+	line-height: 1.8rem;
+}
+p {
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 2.2rem;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.clear::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+a {
+    color: #696969;
+}
+
+/* contents */
+/* header */
+body {
+    background-image: url(../img/background.jpeg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+header {
+    height: 8rem;
+    width: 100%;
+    background-color: #fff;
+}
+.header-container {
+    max-width: 1008px;
+    width: 90%;
+    margin: 0 auto;
+}
+.header-left h2 {
+    color: #1e90ff;
+    line-height: 3.6rem;
+    font-family: 'Cabin Sketch', "Hiragino Kaku Gothic ProN", sans-serif;
+}
+.header-left p {
+    font-family: 'Cabin Sketch', "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin-top: 1.6rem;
+}
+.fa-gamepad {
+    margin-left: 10px;
+}
+.menus {
+    display: flex;
+    flex-wrap: wrap;
+}
+.menus li {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin: 3rem 0 0 3rem;
+    cursor: pointer;
+    position: relative;
+}
+.menus li::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #696969;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+}
+.menus li:hover::after {
+    transform: scale(1, 1);
+}
+.menus a {
+    font-family: 'Cabin Sketch', "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+/* main */
+main {
+    width: 80rem;
+    padding: 4rem;
+    margin: 5rem auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 10px #fff;
+    border: dashed 2px #696969;
+}
+.description-panel h2,
+.description-panel p {
+    font-family: 'Cabin Sketch', "Hiragino Kaku Gothic ProN", sans-serif;
+    line-height: 2.2rem;
+}
+.description-panel h2 {
+    margin-bottom: 2rem;
+}
+.description-panel p {
+    line-height: 2.2rem;
+}
+.game-description {
+    width: 75%;
+}
+.description-text {
+    margin-top: 1rem;
+}
+.game-description .button {
+    color: #fff;
+    background: #1e90ff;
+    border-radius: 4px;
+    line-height: 1.6rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+}
+.game-description .emphasis {
+    color: red;
+}
+.game-description .blur {
+    color: #d3d3d3;
+}
+.level-choices {
+    width: 15%;
+}
+.level-choices h4 {
+    margin-bottom: 0.5rem;
+}
+.level-choices label {
+    padding-left: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+.choice, input, label {
+    cursor: pointer;
+}
+.choice {
+    margin-bottom: 1rem;
+}
+.level-choices button {
+    width: 100%;
+    color: #fff;
+    background: #1e90ff;
+    border: none;
+    border-radius: 4px;
+    padding: 1rem;
+    cursor: pointer;
+}
+.game-panel {
+    margin-top: 4rem;
+}
+.result-panel {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+.retry-button {
+    display: block;
+    width: 10rem;
+    margin: 2rem auto 0;
+    color: #fff;
+    background: #1e90ff;
+    border: none;
+    border-radius: 4px;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    text-align: center;
+}
+.display {
+    display: block;
+}
+.game-result {
+    position: fixed;
+    top: 20rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    background: #fff;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    padding: 3rem 8rem;
+}
+.game-result p {
+    margin-bottom: 1rem;
+}
+.game-victory {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* typing */
+#typing-target-ja,
+#typing-target-en {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.typing-timer-container {
+    margin-bottom: 1rem;
+}
+#typing-score-count {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#typing-score-count li {
+    width: 9%;
+    margin-right: 1%;
+    height: 2rem;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+}
+#typing-info {
+    color: #a9a9a9;
+    text-align: center;
+}
+.shake {
+    animation: shake .1s linear;
+}
+@keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-2%);
+    }
+    40% {
+      transform: translateX(2%);
+    }
+    60% {
+      transform: translateX(-2%);
+    }
+    80% {
+      transform: translateX(2%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+.score-color0 {
+    background: red;
+    opacity: 0.1;
+}
+.score-color1 {
+    background: red;
+    opacity: 0.2;
+}
+.score-color2 {
+    background: red;
+    opacity: 0.3;
+}
+.score-color3 {
+    background: red;
+    opacity: 0.4;
+}
+.score-color4 {
+    background: red;
+    opacity: 0.5;
+}
+.score-color5 {
+    background: red;
+    opacity: 0.6;
+}
+.score-color6 {
+    background: red;
+    opacity: 0.7;
+}
+.score-color7 {
+    background: red;
+    opacity: 0.8;
+}
+.score-color8 {
+    background: red;
+    opacity: 0.9;
+}
+.score-color9 {
+    background: red;
+}
+
+/* slot */
+.slot-machine {
+    width: 50%;
+    margin: 5rem auto;
+    background: #ee82ee;
+    border-radius: 20% 20% 5% 5%;
+    padding: 4rem;
+}
+.slot-points {
+    width: 100%;
+    padding: 1rem 1rem 0;
+    margin-bottom: 1rem;
+    border-radius: 50% 50% 0 0;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slot-points li {
+    margin-bottom: 0.5rem;
+}
+.slot-points img {
+    vertical-align: middle;
+}
+.slot-bonus img {
+    width: 3.5rem;
+}
+.slot-hit img {
+    width: 2.5rem;
+}
+.slot-good,
+.slot-bad {
+    font-size: 1.2rem;
+}
+.slot-good {
+    color: #ff69b4;
+}
+.slot-bad {
+    color: #191970;
+}
+.slot-coins {
+    color: #ffa500;
+}
+.slot-reel {
+    width: 100%;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.slot-panel {
+    height: 19rem;
+    width: 7rem;
+    background: transparent;
+    padding: 0.5rem;
+    position: relative;
+}
+.slot-frame::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 22.5rem;
+    height: 18.8rem;
+    z-index: 6;
+    background: transparent;
+    border: 3px solid #696969;
+}
+.slot-reel img {
+    width: 6rem;
+}
+.slot-image0,
+.slot-image1,
+.slot-image2,
+.slot-image3 {
+    position: absolute;
+    z-index: 0;
+    transition-timing-function: linear;
+}
+.slot-image0 {
+    top: -60px;
+    left: 2px;
+}
+.slot-image1 {
+    top: 0px;
+    left: 2px;
+}
+.slot-image2 {
+    top: 60px;
+    left: 2px;
+}
+.slot-image3 {
+    top: 120px;
+    left: 2px;
+}
+.slot-matched {
+    animation: blinkAnime 0.2s 3 alternate;
+}
+@keyframes blinkAnime {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
+.slot-gogo,
+.slot-millionare {
+    background: #fff;
+    height: 6rem;
+    width: 100%;
+    z-index: 5;
+}
+.slot-gogo p,
+.slot-millionare p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
+    line-height: 6rem;
+    text-align: center;
+    color: #DA8E00;
+    background: -webkit-linear-gradient(-45deg, #F7DE05, #DA8E00, #EDAC06, #F7DE05, #ECB802, #DAAF08, #B67B03, #DA8E00, #EDAC06, #F7DE05, #ECB802, #EDAC06);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.slot-control {
+    width: 100%;
+    padding: 0 4rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.slot-lever {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    transform: translateX(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: -moz-radial-gradient(#dcdcdc 10%, #000 50%);
+    background: -webkit-radial-gradient(#dcdcdc 10%, #000 50%);
+    background: radial-gradient(#dcdcdc 10%, #000 50%);
+    cursor: pointer;
+}
+.slot-lever:active {
+    top: 1rem;
+}
+.slot-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.slot-button {
+    width: 3.5rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    background: -moz-linear-gradient(45deg, #1e90ff 30%, #00bfff 70%);
+    background: -webkit-linear-gradient(45deg, #1e90ff 30%, #00bfff 70%);
+    background: linear-gradient(45deg, #1e90ff 30%, #00bfff 70%);
+    box-shadow: 0 0 0.4rem 0.4rem #0000cd;
+}
+.slot-pushed {
+    background: -moz-linear-gradient(45deg, #ff7f50 30%, #ffa07a 70%);
+    background: -webkit-linear-gradient(45deg, #ff7f50 30%, #ffa07a 70%);
+    background: linear-gradient(45deg, #ff7f50 30%, #ffa07a 70%);
+    box-shadow: 0 0 0.4rem 0.4rem #ff0000;
+}
+.slot-button:active {
+    box-shadow: 0 0 0.3rem 0.3rem #0000cd; 
+}
+.slot-pushed:active {
+    box-shadow: 0 0 0.3rem 0.3rem #ff0000;
+}
+.slot-result {
+    width: 100%;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+}
+.slot-result p {
+    text-align: center;
+    font-size: 2rem;
+    color: #d2691e;
+}
+#slot-result img {
+    width: 2rem;
+}
+
+/* maze */
+#maze-container {
+    position: relative;
+}
+#maze-container img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 10px;
+    transition: 0.1s;
+}
+
+/* memory */
+.memory-life-container {
+    margin-bottom: 2rem;
+}
+#memory-life {
+    color: #ff1493;
+}
+#memory-container {
+    width: 100%;
+    height: 71.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 5px solid #a0522d;
+	background-color: #006400;
+	background-image: radial-gradient(#008000 1px, transparent 1px);
+    background-size: 20px 20px;
+    position: relative;
+}
+#memory-container img {
+    width: 7.4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    transition: 1s;
+    display: inline-block;
+    user-select: none;
+}
+.hide-back {
+    animation: hideBack .5s linear forwards;
+}
+@keyframes hideBack {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(90deg);
+        opacity: 1.0;
+    }
+    51% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 0.0;
+    }
+}
+.show-card {
+    animation: showCard .5s linear forwards;
+}
+@keyframes showCard {
+    0% {
+        transform: rotateY(0deg);
+        opacity: 0.0;
+    }
+    50% {
+        transform: rotateY(90deg);
+        opacity: 0.0;
+    }
+    51% {
+        opacity: 1.0;
+    }
+    100% {
+        transform: rotateY(0deg);
+        opacity: 1.0;
+    }
+}
+.show-back {
+    animation: showBack .5s linear forwards;
+}
+@keyframes showBack {
+    0% {
+        transform: rotateY(0deg);
+        opacity: 0.0;
+    }
+    50% {
+        transform: rotateY(90deg);
+        opacity: 0.0;
+    }
+    51% {
+        opacity: 1.0;
+    }
+    100% {
+        transform: rotateY(0deg);
+        opacity: 1.0;
+    }
+}
+.hide-card {
+    animation: hideCard .5s linear forwards;
+}
+@keyframes hideCard {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(90deg);
+        opacity: 1.0;
+    }
+    51% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 0.0;
+    }
+}
+.memory-death {
+    color: #d3d3d3;
+}
+.memory-correct {
+    padding: 0.5rem !important;
+}
+
+/* shooting */
+#shooting-canvas {
+    background: #191970;
+}
+#shooting-life {
+    color: #ff1493;
+}
+.shooting-death {
+    color: #d3d3d3;
+}
+.shooting-blink {
+    animation: shootingBlink 0.1s 6 alternate;
+}
+@keyframes shootingBlink {
+    0% { opacity: 1 }
+    100% { opacity: 0.5 }
+}

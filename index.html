@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUSO GAMES | 無料で遊べるクソゲー集</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container clear">
+            <div class="header-left float-left">
+                <p>無料で遊べるクソゲー集</p>
+                <a href=""><h2>KUSO GAMES<i class="fas fa-gamepad"></i></h2></a>
+            </div>
+            <nav class="float-right global-nav">
+                <ul class="menus">
+                    <li><a href="typing.html">TYPING</a></li>
+                    <li><a href="slot.html">SLOT</a></li>
+                    <li><a href="maze.html">MAZE</a></li>
+                    <li><a href="memory.html">MEMORY</a></li>
+                    <li><a href="shooting.html">SHOOTING</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="clear">
+        <div class="head-container swiper-container">
+            <div class="head-image swiper-wrapper">
+                <div class="swiper-slide">
+                    <video src="./img/typing.mp4" controls autoplay muted></video>
+                </div>
+                <div class="swiper-slide">
+                    <video src="./img/slot.mp4" controls autoplay muted></video>
+                </div>
+                <div class="swiper-slide">
+                    <video src="./img/maze.mp4" controls autoplay muted></video>
+                </div>
+                <div class="swiper-slide">
+                    <video src="./img/memory.mp4" controls autoplay muted></video>
+                </div>
+                <div class="swiper-slide">
+                    <video src="./img/shooting.mp4" controls autoplay muted></video>
+                </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="main-container float-left">
+            <ul>
+                <li class="game clear">
+                    <a href="typing.html"><img src="./img/typing.png" alt="typing" class="game-image float-left"></a>
+                    <div class="game-description float-right">
+                        <h2><a href="typing.html">TYPING GAME</a></h2>
+                        <p>ブラウザゲームの王道、タイピングゲーム！君はこの難解な文字列を素早く打つことができるか！？さあ挑戦だ！<br>
+                    </div>
+                </li>
+                <li class="game clear">
+                    <a href="slot.html"><img src="./img/slot.png" alt="slot" class="game-image float-right"></a>
+                    <div class="game-description float-left">
+                        <h2><a href="slot.html">SLOT</a></h2>
+                        <p>みんな大好きスロットゲーム！さあ、無料で脳汁出しちゃってください！</p>
+                    </div>
+                </li>
+                <li class="game clear">
+                    <a href="maze.html"><img src="./img/maze.png" alt="maze" class="game-image float-left"></a>
+                    <div class="game-description float-right">
+                        <h2><a href="maze.html">MAZE</a></h2>
+                        <p>君はこの迷宮を抜け出せるか！？人生の岐路に立たされたときにやってほしいゲーム（意味不明）！</p>
+                    </div>
+                </li>
+                <li class="game clear">
+                    <a href="memory.html"><img src="./img/memory.png" alt="memory" class="game-image float-right"></a>
+                    <div class="game-description float-left">
+                        <h2><a href="memory.html">MEMORY GAME</a></h2>
+                        <p>神経衰弱です！記憶力を試してみてください！</p>
+                    </div>
+                </li>
+                <li class="game clear">
+                    <a href="shooting.html"><img src="./img/shooting.png" alt="shooting" class="game-image float-left"></a>
+                    <div class="game-description float-right">
+                        <h2><a href="shooting.html">SHOOTING GAME</a></h2>
+                        <p>ブラウザゲームと言えばこれ、シュティングゲーム！敵を撃って撃って撃ちまくれ！</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <aside class="float-right">
+            <div class="profile">
+                <h5>KUSO GAMESを作った人</h5>
+                <div class="profile-container">
+                    <img src="./img/profile.jpg" alt="profile-image">
+                </div>
+                <p class="name">ponkotsuhacks</p>
+                <p>趣味プログラマー。社会の役に立たないウェブサイトを作っては喜んでいる。HTML/CSS/JavaScript/Pythonがほんの少しだけできる。でも一番得意なのはVBA。クソゲーを作らせたら右に出るものはいない。</p>
+                <p class="follow">ponkotsuをフォローする</p>
+                <div class="icon-container">
+                    <a class="sns twitter" href="https://twitter.com/ash_hacks_"><i class="fab fa-twitter fa-fw"></i>@ash_hacks_</a>
+                    <a class="sns instagram" href="https://instagram.com/ponkotsucamera"><i class="fab fa-instagram fa-fw"></i>@ponkotsucamera</a>
+                </div>                
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <p>©︎ 2020 ponkotsu</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+    <script type="text/javascript">
+        let swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // autoplay: true,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+    </script>
+</body>
+</html>

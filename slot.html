@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLOT | 無料で遊べるクソゲー集</title>
+    <link rel="stylesheet" href="css/gameStyles.css">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c105f52f00.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container clear">
+            <div class="header-left float-left">
+                <p>無料で遊べるクソゲー集</p>
+                <a href="index.html"><h2>KUSO GAMES<i class="fas fa-gamepad"></i></h2></a>
+            </div>
+            <nav class="float-right global-nav">
+                <ul class="menus">
+                    <li><a href="typing.html">TYPING</a></li>
+                    <li><a href="slot.html">SLOT</a></li>
+                    <li><a href="maze.html">MAZE</a></li>
+                    <li><a href="memory.html">MEMORY</a></li>
+                    <li><a href="shooting.html">SHOOTING</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="description-panel clear">
+            <div class="game-description float-left">
+                <h2>SLOT</h2>
+                <p>みんな大好きスロットゲーム！完全に目押しが効く闇のクソ台！コツは少し早めに押すこと！</p>
+                <p>コインを<span class="emphasis">100</span>枚まで増やすとクリアだよ！</p>
+                <p><span class="blur">*たまにリールが廻り過ぎてしまうという致命的なバグがあります（直せませんでしたすいません。）</span></p>
+                <p class="description-text">ゲームを始めるには、難易度を選んで <span class="button">START</span> ボタンを押してからレバーを叩いてください。</p>
+            </div>
+            <form method="submit" action="" class="level-choices float-right">
+                <h4>難易度</h4>
+                <div class="choice">
+                    <input type="radio" name="level" value="0" id="easy">
+                    <label for="easy">簡単</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" name="level" value="1" id="normal">
+                    <label for="normal">普通</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" name="level" value="2" id="difficult">
+                    <label for="difficult">難しい</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" name="level" value="3" id="hard">
+                    <label for="hard">鬼畜</label>
+                </div>
+                <button id="start-button">START</button>
+            </form>
+        </div>
+        <div class="game-panel">
+            <div class="slot-machine">
+                <div class="slot-points">
+                    <div class="slot-left">
+                        <ul class="slot-hit">
+                            <li class="slot-coins"><img src="img/slotDiamond.jpeg" alt="DIAMOND">15COINS</li>
+                            <li class="slot-coins"><img src="img/slotBanana.jpeg" alt="BANANA">10COINS</li>
+                        </ul>
+                    </div>
+                    <div class="slot-center">
+                        <ul class="slot-bonus slot-center">
+                            <li  class="slot-good"><img src="img/slotSeven.jpeg" alt="BONUS">50COINS</li>
+                            <li class="slot-good"><img src="img/slotBar.jpeg" alt="BAR">30COINS</li>
+                            <li  class="slot-bad"><img src="img/slotSkeleton.jpeg" alt="SKELETON">-50COINS</li>
+                        </ul>
+                    </div>
+                    <div class="slot-right">
+                        <ul class="slot-hit slot-right">
+                            <li class="slot-coins"><img src="img/slotCherry.jpeg" alt="CHERRY">5COINS</li>
+                            <li class="slot-coins"><img src="img/slotReplay.jpeg" alt="CHERRY">REPLAY</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slot-reel">
+                    <div class="slot-gogo"><p>GO!GO!</p></div>
+                    <div class="slot-panel slot-frame">
+                        <ul>
+                            <li class="slot-image0" id="slot-L0"><img src="./img/slotBar.jpeg" alt="Bar"></li>
+                            <li class="slot-image1" id="slot-L1"><img src="./img/slotDiamond.jpeg" alt="Diamond"></li>
+                            <li class="slot-image2" id="slot-L2"><img src="./img/slotReplay.jpeg" alt="Replay"></li>
+                            <li class="slot-image3" id="slot-L3"><img src="./img/slotDiamond.jpeg" alt="Diamond"></li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel">
+                        <ul>
+                            <li class="slot-image0" id="slot-C0"><img src="./img/slotReplay.jpeg" alt="Replay"></li>
+                            <li class="slot-image1" id="slot-C1"><img src="./img/slotBanana.jpeg" alt="Banana"></li>
+                            <li class="slot-image2" id="slot-C2"><img src="./img/slotDiamond.jpeg" alt="Diamond"></li>
+                            <li class="slot-image3" id="slot-C3"><img src="./img/slotCherry.jpeg" alt="Cherry"></li>
+                        </ul>
+                    </div>
+                    <div class="slot-panel">
+                        <ul>
+                            <li class="slot-image0" id="slot-R0"><img src="./img/slotDiamond.jpeg" alt="Diamond"></li>
+                            <li class="slot-image1" id="slot-R1"><img src="./img/slotCherry.jpeg" alt="Cherry"></li>
+                            <li class="slot-image2" id="slot-R2"><img src="./img/slotBanana.jpeg" alt="Banana"></li>
+                            <li class="slot-image3" id="slot-R3"><img src="./img/slotReplay.jpeg" alt="Replay"></li>
+                        </ul>
+                    </div>
+                    <div class="slot-millionare"><p>MILLIONARE</p></div>
+                </div>
+                <div class="slot-control">
+                    <div class="slot-lever"></div>
+                    <ul class="slot-buttons">
+                        <li class="slot-button" id="slot-button1"></li>
+                        <li class="slot-button" id="slot-button2"></li>
+                        <li class="slot-button" id="slot-button3"></li>
+                    </ul>
+                </div>
+                <div class="slot-result">
+                    <p>COIN：<span id="slot-score">20</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="result-panel">
+            <div id="slot-result" class="game-result">
+                <h2 id="slot-victory" class="game-victory"></h2>
+                <p>ゲーム数：<span id="slot-result-games"></span></p>
+                <p><img src="./img/slotSeven.jpeg" alt="Seven">：<span id="slot-result-seven"></span></p>
+                <p><img src="./img/slotBar.jpeg" alt="Bar">：<span id="slot-result-bar"></span></p>
+                <p><img src="./img/slotSkeleton.jpeg" alt="Skeleton">：<span id="slot-result-skeleton"></span></p>
+                <p><img src="./img/slotDiamond.jpeg" alt="Diamond">：<span id="slot-result-diamond"></span></p>
+                <p><img src="./img/slotBanana.jpeg" alt="Banana">：<span id="slot-result-banana"></span></p>
+                <p><img src="./img/slotCherry.jpeg" alt="Cherry">：<span id="slot-result-cherry"></span></p>
+                <p><img src="./img/slotReplay.jpeg" alt="Seven">：<span id="slot-result-replay"></span></p>
+                <a href="" class="retry-button">RETRY</a>
+            </div>
+        </div>
+    </main>
+    
+    <script src="js/slot.js"></script>
+</body>
+</html>
