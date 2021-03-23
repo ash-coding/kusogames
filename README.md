@@ -5,12 +5,10 @@
   
   
 ## URL  
-___  
 [Kuso Games](https://kusogames-5ceca.web.app/)  
   
   
 ## ゲーム一覧  
-___  
 * Typing game  
 * Slot  
 * Maze\(迷路\)  
